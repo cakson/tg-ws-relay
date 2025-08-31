@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  relay:
+    build: .
+    image: tg-ws-relay:latest
+    env_file: .env
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
